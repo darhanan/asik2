@@ -4,6 +4,10 @@ Astana IT University | School of Software Engineering
 Course: ShP-2216 Software Design Patterns | Academic year 2026-2027
 Individual work | Java, JDK 17
 
+**Student:** Darkhan Tynyshtyk
+**Group:** SE-2523
+**Repository:** https://github.com/darhanan/asik2
+
 ## Project purpose
 
 One console logistics application that combines two creational patterns in a single run:

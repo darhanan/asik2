@@ -3,9 +3,9 @@
 **Course:** ShP-2216 Software Design Patterns  
 **Institution:** Astana IT University, School of Software Engineering  
 **Academic year:** 2026-2027 | Programme 6B06102 Software Engineering, Year 2, Trimester 4  
-**Student:** `<Full name>`  
-**Group:** `<Group>`  
-**GitHub repository:** `<repository link>`  
+**Student:** Darkhan Tynyshtyk  
+**Group:** SE-2523  
+**GitHub repository:** https://github.com/darhanan/asik2  
 **Submitted commit:** `<commit hash>`
 
 ---
