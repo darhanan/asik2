@@ -148,8 +148,14 @@ The full transcript of all six required checks is in `docs/verification-transcri
 
 ## Assessed commit
 
-<!-- Fill this in after your final push, and copy the same value into the report. -->
-Submitted commit: `<commit-hash>`
+The version assessed for this assignment is the commit tagged `submission-v1` on `main`:
+
+```bash
+git fetch --tags
+git checkout submission-v1
+```
+
+Tag and full history: https://github.com/darhanan/asik2/releases/tag/submission-v1
 
 ## References
 

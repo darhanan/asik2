@@ -6,7 +6,7 @@
 **Student:** Darkhan Tynyshtyk  
 **Group:** SE-2523  
 **GitHub repository:** https://github.com/darhanan/asik2  
-**Submitted commit:** `<commit hash>`
+**Submitted commit:** tag `submission-v1` (see README for the exact hash)
 
 ---
 
