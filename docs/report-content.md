@@ -1,8 +1,13 @@
 # Assignment 2 - Factory Method and Abstract Factory
 
-**Course:** ShP-2216 Software Design Patterns  
-**Institution:** Astana IT University, School of Software Engineering  
-**Academic year:** 2026-2027 | Programme 6B06102 Software Engineering, Year 2, Trimester 4  
+**Institution:** Astana IT University | School of Software Engineering  
+**Course:** ShP-2216 Software Design Patterns | Academic year 2026-2027  
+**Programme:** 6B06102 Software Engineering | Year 2, Trimester 4  
+**Instructor:** Yerassyl Bekenov  
+**Format:** Individual work | Java, JDK 17 | Report in English  
+**Weight:** 15% of the 1st Attestation grade  
+**Submission deadline:** 20.09.2026, 23:59  
+
 **Student:** Darkhan Tynyshtyk  
 **Group:** SE-2523  
 **GitHub repository:** https://github.com/darhanan/asik2  
@@ -41,10 +46,13 @@ that must belong to the same family).
 
 ## 2. UML class diagrams
 
-> Insert the rendered images here. Sources: `docs/uml-factory-method.puml` and
-> `docs/uml-abstract-factory.puml`; a readable ASCII version of both is in `docs/uml-diagrams.md`.
+Both diagrams below are drawn from the submitted code. Notation: a hollow triangle with a
+solid line is inheritance (`extends`), a hollow triangle with a dashed line is interface
+implementation (`implements`), and a dashed open arrow is a dependency such as `<<creates>>`.
 
 ### 2.1 Factory Method (Part A)
+
+[[UML:fm]]
 
 Roles shown in the diagram:
 
@@ -72,6 +80,8 @@ DeliveryApplication.run(cargo, destination)
 ```
 
 ### 2.2 Abstract Factory (Part B)
+
+[[UML:af]]
 
 | Pattern role       | Class in the code                                                   |
 |--------------------|---------------------------------------------------------------------|

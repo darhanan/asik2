@@ -1,9 +1,12 @@
 # UML Class Diagrams
 
-Source files: `uml-factory-method.puml`, `uml-abstract-factory.puml`.
-Render them with the PlantUML plugin in IntelliJ IDEA (right-click the file -> render),
-or with the `plantuml` CLI, then paste the images into the report.
-The ASCII versions below are provided so the structure is readable without tooling.
+The diagrams that appear in the submitted report PDF are drawn as vector graphics by
+`tools/umldiag.py` and embedded directly by `tools/md2pdf.py` (see Section 2 of the report).
+
+Equivalent PlantUML sources are kept in `uml-factory-method.puml` and
+`uml-abstract-factory.puml` for anyone who prefers to render them with the PlantUML plugin
+in IntelliJ IDEA or the `plantuml` CLI. The ASCII versions below make the structure readable
+without any tooling at all.
 
 ## Diagram 1 - Factory Method (Part A)
 

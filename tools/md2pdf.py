@@ -139,6 +139,17 @@ while i < len(lines):
         i += 1
         continue
 
+    m_uml = re.match(r'^\[\[UML:(fm|af)\]\]\s*$', line.strip())
+    if m_uml:
+        import os
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from umldiag import fm_flowable, af_flowable
+        story.append(Spacer(1, 4))
+        story.append(fm_flowable(FRAME_W) if m_uml.group(1) == 'fm' else af_flowable(FRAME_W))
+        story.append(Spacer(1, 10))
+        i += 1
+        continue
+
     m = re.match(r'^(#{1,3})\s+(.*)$', line)
     if m:
         style = {1: H1, 2: H2, 3: H3}[len(m.group(1))]

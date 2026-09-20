@@ -55,11 +55,16 @@ src/main/java/aitu/sdp/assignment2/
     └── DeliveryApplication.java               Client of both patterns
 
 docs/
-├── uml-factory-method.puml                    UML source - Factory Method
-├── uml-abstract-factory.puml                  UML source - Abstract Factory
+├── uml-factory-method.puml                    UML source - Factory Method (PlantUML)
+├── uml-abstract-factory.puml                  UML source - Abstract Factory (PlantUML)
 ├── uml-diagrams.md                            Readable ASCII version of both diagrams
 ├── verification-transcript.txt                Evidence for the six required checks
 └── clean-code-evidence.md                     Annotated Clean Code excerpts
+
+tools/
+├── md2pdf.py                                  Renders the report Markdown into the PDF
+├── umlpdf.py                                  UML drawing primitives (vector, no dependencies)
+└── umldiag.py                                 Layouts for the two UML class diagrams
 ```
 
 ## Prerequisites

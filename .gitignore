@@ -9,3 +9,8 @@ out/
 
 # OS
 .DS_Store
+
+# Python
+__pycache__/
+*.pyc
+venv/
