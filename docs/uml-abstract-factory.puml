@@ -1,0 +1,72 @@
+@startuml Abstract Factory - GUI
+title Abstract Factory - platform UI component families
+
+interface Button <<AbstractProduct>> {
+  + paint(): String
+}
+
+interface Checkbox <<AbstractProduct>> {
+  + paint(): String
+}
+
+class WindowsButton <<ConcreteProduct>> {
+  + paint(): String
+}
+class WindowsCheckbox <<ConcreteProduct>> {
+  + paint(): String
+}
+class MacOSButton <<ConcreteProduct>> {
+  + paint(): String
+}
+class MacOSCheckbox <<ConcreteProduct>> {
+  + paint(): String
+}
+
+interface GUIFactory <<AbstractFactory>> {
+  + createButton(): Button
+  + createCheckbox(): Checkbox
+  + platformName(): String
+}
+
+class WindowsFactory <<ConcreteFactory>> {
+  + createButton(): Button
+  + createCheckbox(): Checkbox
+  + platformName(): String
+}
+
+class MacOSFactory <<ConcreteFactory>> {
+  + createButton(): Button
+  + createCheckbox(): Checkbox
+  + platformName(): String
+}
+
+class DeliveryApplication <<Client>> {
+  - guiFactory: GUIFactory
+  - button: Button
+  - checkbox: Checkbox
+  + DeliveryApplication(guiFactory: GUIFactory, logistics: Logistics)
+  + run(cargo: String, destination: String): String[]
+}
+
+Button <|.. WindowsButton
+Button <|.. MacOSButton
+Checkbox <|.. WindowsCheckbox
+Checkbox <|.. MacOSCheckbox
+GUIFactory <|.. WindowsFactory
+GUIFactory <|.. MacOSFactory
+
+WindowsFactory ..> WindowsButton : <<creates>>
+WindowsFactory ..> WindowsCheckbox : <<creates>>
+MacOSFactory ..> MacOSButton : <<creates>>
+MacOSFactory ..> MacOSCheckbox : <<creates>>
+
+DeliveryApplication --> GUIFactory : injected in constructor
+DeliveryApplication --> Button : uses
+DeliveryApplication --> Checkbox : uses
+
+note bottom of GUIFactory
+  One implementation supplies both
+  creation methods, so a client can
+  never get a mixed-family pair.
+end note
+@enduml

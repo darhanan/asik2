@@ -1,0 +1,51 @@
+@startuml Factory Method - Logistics
+title Factory Method - delivery transport creation
+
+interface Transport <<Product>> {
+  + deliver(cargo: String, destination: String): String
+}
+
+class Truck <<ConcreteProduct>> {
+  - ROAD_ROUTE: String
+  + deliver(cargo: String, destination: String): String
+}
+
+class Ship <<ConcreteProduct>> {
+  - SEA_ROUTE: String
+  + deliver(cargo: String, destination: String): String
+}
+
+abstract class Logistics <<Creator>> {
+  + planDelivery(cargo: String, destination: String): String
+  # {abstract} createTransport(): Transport
+}
+
+class RoadLogistics <<ConcreteCreator>> {
+  # createTransport(): Transport
+}
+
+class SeaLogistics <<ConcreteCreator>> {
+  # createTransport(): Transport
+}
+
+class DeliveryApplication <<Client>> {
+  - logistics: Logistics
+  + run(cargo: String, destination: String): String[]
+}
+
+Transport <|.. Truck
+Transport <|.. Ship
+Logistics <|-- RoadLogistics
+Logistics <|-- SeaLogistics
+Logistics ..> Transport : creates and uses
+RoadLogistics ..> Truck : <<creates>>
+SeaLogistics ..> Ship : <<creates>>
+DeliveryApplication --> Logistics : calls planDelivery(...)
+
+note right of Logistics::planDelivery
+  Shared workflow:
+  Transport t = createTransport();
+  return t.deliver(cargo, destination);
+  No concrete transport is named here.
+end note
+@enduml
