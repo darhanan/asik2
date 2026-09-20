@@ -63,9 +63,15 @@ docs/
 
 tools/
 ├── md2pdf.py                                  Renders the report Markdown into the PDF
+├── md2docx.js                                 Renders the same Markdown into the .docx
+├── export_uml_png.py                          Exports the diagrams as PNGs for the .docx
 ├── umlpdf.py                                  UML drawing primitives (vector, no dependencies)
 └── umldiag.py                                 Layouts for the two UML class diagrams
 ```
+
+The report is submitted as `Assignment2_SE-2523_Tynyshtyk_Darkhan.pdf`; the same content is
+also provided as `Assignment2_SE-2523_Tynyshtyk_Darkhan.docx`. See `tools/README.md` for how
+both are rebuilt.
 
 ## Prerequisites
 
