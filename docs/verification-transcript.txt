@@ -1,0 +1,74 @@
+=== Verification transcript - Assignment 2 ===
+JDK: openjdk version "25.0.1" 2025-10-21 (compiled with --release 17)
+Date: Sun Sep 20 21:16:50 +05 2026
+
+--- Check 1: ROAD + WINDOWS ---
+$ java -cp out aitu.sdp.assignment2.app.Main ROAD WINDOWS
+Delivery mode: ROAD
+UI platform: WINDOWS
+UI family: WINDOWS
+Rendering Windows button
+Rendering Windows checkbox
+Truck delivers laboratory equipment to Aktau warehouse by highway route
+[exit code: 0]
+
+--- Check 2: SEA + WINDOWS ---
+$ java -cp out aitu.sdp.assignment2.app.Main SEA WINDOWS
+Delivery mode: SEA
+UI platform: WINDOWS
+UI family: WINDOWS
+Rendering Windows button
+Rendering Windows checkbox
+Ship delivers laboratory equipment to Aktau warehouse in containers by sea route
+[exit code: 0]
+
+--- Check 3: ROAD + MACOS ---
+$ java -cp out aitu.sdp.assignment2.app.Main ROAD MACOS
+Delivery mode: ROAD
+UI platform: MACOS
+UI family: MACOS
+Rendering macOS button
+Rendering macOS checkbox
+Truck delivers laboratory equipment to Aktau warehouse by highway route
+[exit code: 0]
+
+--- Check 4: SEA + MACOS ---
+$ java -cp out aitu.sdp.assignment2.app.Main SEA MACOS
+Delivery mode: SEA
+UI platform: MACOS
+UI family: MACOS
+Rendering macOS button
+Rendering macOS checkbox
+Ship delivers laboratory equipment to Aktau warehouse in containers by sea route
+[exit code: 0]
+
+--- Check 5: unsupported delivery mode + valid platform ---
+$ java -cp out aitu.sdp.assignment2.app.Main AIR WINDOWS
+Unsupported delivery mode: 'AIR'. Supported values: ROAD, SEA.
+Stopping without running the delivery.
+[exit code: 1]
+
+--- Check 6: valid delivery mode + unsupported platform ---
+$ java -cp out aitu.sdp.assignment2.app.Main ROAD LINUX
+Unsupported UI platform: 'LINUX'. Supported values: WINDOWS, MACOS.
+Stopping without running the delivery.
+[exit code: 1]
+
+--- Check 7: missing input (no arguments, no console input) ---
+$ java -cp out aitu.sdp.assignment2.app.Main < /dev/null
+Delivery mode (ROAD, SEA): 
+Missing input: no value was provided.
+Stopping without running the delivery.
+[exit code: 1]
+
+--- Check 8: interactive console input, lowercase accepted ---
+$ printf 'road
+macos
+' | java -cp out aitu.sdp.assignment2.app.Main
+Delivery mode (ROAD, SEA): UI platform (WINDOWS, MACOS): Delivery mode: ROAD
+UI platform: MACOS
+UI family: MACOS
+Rendering macOS button
+Rendering macOS checkbox
+Truck delivers laboratory equipment to Aktau warehouse by highway route
+[exit code: 0]
